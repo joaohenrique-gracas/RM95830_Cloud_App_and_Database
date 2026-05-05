@@ -1,0 +1,11 @@
+# Variáveis de ambiente (O mais importante!)
+.env
+
+# Bibliotecas e ambientes virtuais
+venv/
+__pycache__/
+.streamlit/
+
+# Arquivos de log e banco local
+*.log
+*.sqlite
