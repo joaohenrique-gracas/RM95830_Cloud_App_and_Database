@@ -20,7 +20,7 @@ password = "fiap-rm95830-app-db"
 
 # String de conexão seguindo o modelo do professor (Driver 17)
 conn_str = (
-    "DRIVER={ODBC Driver 17 for SQL Server};"
+    "DRIVER={ODBC Driver 18 for SQL Server};"
     "Encrypt=yes;"
     "TrustServerCertificate=no;"
     "Connection Timeout=30;"
