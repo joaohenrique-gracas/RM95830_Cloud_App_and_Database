@@ -18,13 +18,13 @@ password = "fiap-rm95830-app-db"
 
 # Detecta o sistema e define o driver correto
 if platform.system() == "Windows":
-    driver = "{ODBC Driver 17 for SQL Server}"
+    version_driver = "{ODBC Driver 17 for SQL Server}"
 else:
-    driver = "{ODBC Driver 18 for SQL Server}"
+    version_driver = "{ODBC Driver 18 for SQL Server}"
     
 # String de conexão seguindo o modelo do professor
 conn_str = (
-    "DRIVER={driver};"
+    "DRIVER={version_driver};"
     "Encrypt=yes;"
     "TrustServerCertificate=no;"
     "Connection Timeout=30;"
