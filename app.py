@@ -4,9 +4,7 @@ import pandas as pd
 import pyodbc
 import os
 from dotenv import load_dotenv 
-
-
-load_dotenv()
+import platform
 
 # --- CONFIGURAÇÕES INICIAIS ---
 st.set_page_config(page_title="Dashboard Climático", page_icon="🌤️")
@@ -18,9 +16,15 @@ database = "database-inova"
 username = "sqldb-rm95839-adm"
 password = "fiap-rm95830-app-db"
 
-# String de conexão seguindo o modelo do professor (Driver 17)
+# Detecta o sistema e define o driver correto
+if platform.system() == "Windows":
+    driver = "{ODBC Driver 17 for SQL Server}"
+else:
+    driver = "{ODBC Driver 18 for SQL Server}"
+    
+# String de conexão seguindo o modelo do professor
 conn_str = (
-    "DRIVER={ODBC Driver 18 for SQL Server};"
+    "DRIVER={driver};"
     "Encrypt=yes;"
     "TrustServerCertificate=no;"
     "Connection Timeout=30;"
