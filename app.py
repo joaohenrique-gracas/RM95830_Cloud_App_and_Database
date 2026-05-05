@@ -13,10 +13,10 @@ st.set_page_config(page_title="Dashboard Climático", page_icon="🌤️")
 
 # Configuração do Banco (Ajuste as variáveis de ambiente na sua VM ou preencha aqui)
 # Dica: Na VM, você pode rodar 'export DB_SERVER=seu_servidor.database.windows.net'
-server = os.getenv("DB_SERVER")
-database = os.getenv("DB_NAME")
-username = os.getenv("DB_USER")
-password = os.getenv("DB_PASSWORD")
+server = "sqldb-server-rm95830.database.windows.net"
+database = "database-inova"
+username = "sqldb-rm95839-adm"
+password = "fiap-rm95830-app-db"
 
 # String de conexão seguindo o modelo do professor (Driver 17)
 conn_str = (
@@ -31,7 +31,7 @@ conn_str = (
 )
 
 # Chave da API OpenWeatherMap
-API_KEY = os.getenv("API_KEY")
+API_KEY = "014705e362b53e6504a77422d23e2aae"
 
 # --- FUNÇÕES DE DADOS ---
 
